@@ -1,10 +1,33 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <main class="main">
+    <component :is="layout">
+      <router-view/>
+    </component>
+  </main>
 </template>
+
+<script>
+import AdminLayout from '@/layouts/AdminLayout.vue'
+import EmptyLayout from '@/layouts/EmptyLayout.vue'
+
+export default {
+  
+
+  computed: {
+    layout(){
+      return (this.$route.meta.layout || 'empty') + '-layout'
+      // console.log(this.$route.meta)
+      // return 'admin-layout'
+    }
+  },
+
+
+  components: { 
+    EmptyLayout, AdminLayout
+  },
+  
+}
+</script>
 
 <style lang="scss">
 #app {
@@ -15,16 +38,4 @@
   color: #2c3e50;
 }
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
 </style>
