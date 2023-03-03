@@ -43,7 +43,6 @@ export default {
   },
   beforeUpdate() {
     if (auth.currentUser) {
-      // set local 'displayName' to user's displayName
       this.displayName = auth.currentUser.displayName
     }
   },
