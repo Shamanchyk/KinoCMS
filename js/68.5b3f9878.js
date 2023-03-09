@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkkinocms"]=self["webpackChunkkinocms"]||[]).push([[68],{68:function(n,r,u){u.r(r),u.d(r,{default:function(){return f}});var e=u(252);function c(n,r,u,c,i,s){return(0,e.wg)(),(0,e.iD)("div",null," films ")}var i={},s=u(744);const t=(0,s.Z)(i,[["render",c]]);var f=t}}]);
-//# sourceMappingURL=68.5b3f9878.js.map
